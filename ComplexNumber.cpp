@@ -2,7 +2,7 @@
 // Created by devernua on 28.09.16.
 //
 
-#include "Complexnumber.h"
+#include "ComplexNumber.h"
 
 ComplexNumber::ComplexNumber(double Re, double Im){
     this->Re = Re;
@@ -14,28 +14,28 @@ ComplexNumber::ComplexNumber(const ComplexNumber & number){
     Im = number.Im;
 }
 
+double ComplexNumber::getRe(ComplexNumber number){ return number.Re;}
+double ComplexNumber::getIm(ComplexNumber number){ return number.Im;}
+
+
 ComplexNumber & ComplexNumber::operator+(const ComplexNumber & number){
     Re += number.Re;
     Im += number.Im;
     return  *this;
 }
 
-ComplexNumber operator+(ComplexNumber number, double n){
-    number.Re = number.Re + n;
-    return number;
+ComplexNumber & ComplexNumber::operator-(const ComplexNumber & number){
+    Re -= number.Re;
+    Im -= number.Im;
+    return  *this;
 }
 
-ComplexNumber operator-(const ComplexNumber n1, const ComplexNumber n2){
-    ComplexNumber res;
-    res.Re = n1.Re - n2.Re;
-    res.Im = n1.Im - n2.Im;
-    return res;
+ComplexNumber & ComplexNumber::operator*(const ComplexNumber & number){
+    Re = Re*number.Re - Im*number.Im;
+    Im = Re*number.Im + number.Re*Im;
+    return  *this;
 }
 
-ComplexNumber operator-(ComplexNumber number, double n){
-    number.Re = number.Re - n;
-    return number;
-}
 
 void ComplexNumber::print(ComplexNumber & number){
     if (number.Im == 0){
@@ -76,6 +76,10 @@ void  ComplexNumber::swap(ComplexNumber & number){
 }
 */
 bool operator==(ComplexNumber n1, ComplexNumber  n2){
-    return ((n1.Re == n2.Re) && (n1.Im == n2.Im))? true : false;
+    return (n1.Re == n2.Re) && (n1.Im == n2.Im);
+}
+
+bool operator!=(ComplexNumber n1, ComplexNumber  n2){
+    return !(n1 == n2);
 }
 
