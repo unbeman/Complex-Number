@@ -5,8 +5,6 @@
 #ifndef HOMEWORK_COMPLEXNUMBER_H
 #define HOMEWORK_COMPLEXNUMBER_H
 
-#endif //HOMEWORK_COMPLEXNUMBER_H
-
 #include <iostream>
 using namespace std;
 
@@ -27,14 +25,8 @@ struct ComplexNumber {
 
     void swap(ComplexNumber & number);
 
-//    ComplexNumber &operator=(ComplexNumber & number);
-
-
-//private:
     double Re;
     double Im;
-
-
-
-
 };
+
+#endif //HOMEWORK_COMPLEXNUMBER_H
