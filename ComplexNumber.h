@@ -5,8 +5,6 @@
 #ifndef HOMEWORK_COMPLEXNUMBER_H
 #define HOMEWORK_COMPLEXNUMBER_H
 
-#endif //HOMEWORK_COMPLEXNUMBER_H
-
 #include <iostream>
 using namespace std;
 
@@ -36,4 +34,10 @@ struct ComplexNumber {
 private:
     double Re;
     double Im;
+<<<<<<< HEAD
 };
+=======
+};
+
+#endif //HOMEWORK_COMPLEXNUMBER_H
+>>>>>>> 7db3317cc66d690f1c74b5231adc2706008ba48c
