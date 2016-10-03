@@ -15,11 +15,9 @@ struct ComplexNumber {
     double getRe(const ComplexNumber number);
     double getIm(const ComplexNumber number);
 
-
     ComplexNumber &operator+(const ComplexNumber &number);
     ComplexNumber &operator-(const ComplexNumber &number);
     ComplexNumber &operator*(const ComplexNumber &number);
-
 
     void print(ComplexNumber & number);
     friend ostream &operator<<(ostream & stream, ComplexNumber & number);
@@ -30,14 +28,9 @@ struct ComplexNumber {
 
     void swap(ComplexNumber & number);
 
-
 private:
     double Re;
     double Im;
-<<<<<<< HEAD
-};
-=======
 };
 
 #endif //HOMEWORK_COMPLEXNUMBER_H
->>>>>>> 7db3317cc66d690f1c74b5231adc2706008ba48c
